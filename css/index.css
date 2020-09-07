@@ -3455,24 +3455,24 @@ _:future,
   height: 100%;
   background-color: var(--preloader-bg);
 }
-#loading-box.loaded {
+#loading-box.loadedPjax {
   display: none;
 }
-#loading-box.loaded .loading-left-bg {
+#loading-box.loadedPjax .loading-left-bg {
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -o-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
 }
-#loading-box.loaded .loading-right-bg {
+#loading-box.loadedPjax .loading-right-bg {
   -webkit-transform: translate(100%, 0);
   -moz-transform: translate(100%, 0);
   -o-transform: translate(100%, 0);
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0);
 }
-#loading-box.loaded .spinner-box {
+#loading-box.loadedPjax .spinner-box {
   display: none;
 }
 @-moz-keyframes configure-clockwise {
