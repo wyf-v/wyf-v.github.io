@@ -127,20 +127,24 @@ if (autoChangeMode === '1') {
 
 <p>我选择自定义命令（Custom Command）</p>
 <p>在其<a target="_blank" rel="noopener" href="https://support.typora.io/Upload-Image/">Upload-Image文档</a>中描述了将会在命令行后面添加多个图片路径参数，并且可以自动将返回结果里的url提取出来，并替换文章中的链接。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot.png" alt="screenshot"></p>
+<img src= "/img/loading.gif" data-lazy-src="/2020/09/05/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot.png" class="" title="screenshot">
+
 <h1 id="测试Typorade上传服务"><a href="#测试Typorade上传服务" class="headerlink" title="测试Typorade上传服务"></a>测试Typorade上传服务</h1><p>先写一段代码测试一下</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">a = sys.argv[<span class="number">0</span>]</span><br><span class="line">print(<span class="string">&#x27;sys.argv[0]:&#x27;</span>,a)</span><br><span class="line">b=sys.argv</span><br><span class="line">print(<span class="string">&#x27;sys.argv:&#x27;</span>,b)</span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-lazy-src="/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307111.png" alt="screenshot"></p>
+<img src= "/img/loading.gif" data-lazy-src="/2020/09/05/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307111.png" class="" title="screenshot">
+
 <p>点击验证图片上传选项</p>
 <p>显示如下结果</p>
-<p><img src= "/img/loading.gif" data-lazy-src="/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307233.png" alt="screenshot"></p>
+<img src= "/img/loading.gif" data-lazy-src="/2020/09/05/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307233.png" class="" title="screenshot">
+
 <p>可以看到sys.argv[1],sys.argv[2]就是要上传图片的路径。</p>
 <p>先写两个假输出</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">a = sys.argv</span><br><span class="line">print(<span class="string">&#x27;sys.argv:&#x27;</span>,a)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;https://www.baidu.com/img/flexible/logo/pc/result@2.png\n&quot;</span> * <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
 <p>再次验证</p>
-<p><img src= "/img/loading.gif" data-lazy-src="/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307577.png" alt="screenshot"></p>
+<img src= "/img/loading.gif" data-lazy-src="/2020/09/05/Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84python%E5%AE%9E%E7%8E%B0/screenshot-9307577.png" class="" title="screenshot">
+
 <p>验证成功，所以只要上传完成后打印地址就行啦。</p>
 <blockquote>
 <p>ps: 如果上传失败了一个，导致输出结果不足意味着本次任务得重来，如果有避免重复上传的方法，能够节省服务器空间。比如记录文件哈希，或者删除已上传的本次任务。</p>
