@@ -3455,24 +3455,24 @@ _:future,
   height: 100%;
   background-color: var(--preloader-bg);
 }
-#loading-box.loadedPjax {
+.loadedPjax {
   display: none;
 }
-#loading-box.loadedPjax .loading-left-bg {
+.loadedPjax .loading-left-bg {
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
   -o-transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
 }
-#loading-box.loadedPjax .loading-right-bg {
+.loadedPjax .loading-right-bg {
   -webkit-transform: translate(100%, 0);
   -moz-transform: translate(100%, 0);
   -o-transform: translate(100%, 0);
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0);
 }
-#loading-box.loadedPjax .spinner-box {
+.loadedPjax .spinner-box {
   display: none;
 }
 @-moz-keyframes configure-clockwise {
