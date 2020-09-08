@@ -292,12 +292,6 @@ document.addEventListener('pjax:send', function () {
       }
     }
   }
-document.addEventListener('pjax:start', function () {
-  console.log("pjax:start")
-  }
-document.addEventListener('pjax:end', function () {
-  console.log("pjax:end")
-  }
 
   typeof typed === 'object' && typed.destroy()
 
@@ -306,4 +300,15 @@ document.addEventListener('pjax:end', function () {
   //reset readmode
   $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
 
+})
+
+
+document.addEventListener('pjax:start', function () {
+  console.log("pjax:start")
+  }
+})
+
+document.addEventListener('pjax:end', function () {
+  console.log("pjax:end")
+  }
 })</script></div></body></html>
