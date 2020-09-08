@@ -207,6 +207,7 @@ document.addEventListener('pjax:complete', function () {
 
   // prismjs
   typeof Prism === 'object' && Prism.highlightAll()
+  console.log("pjax:complete")
 })
 
 
@@ -225,7 +226,7 @@ document.addEventListener('pjax:send', function () {
 
   //reset readmode
   $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
-
+  console.log("pjax:send")
 })
 
 
